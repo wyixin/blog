@@ -1,0 +1,1204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>task</title>
+<!-- 2014-07-04 Fri 02:44 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="yixin" />
+<style rel="stylesheet" type="text/css">
+<!--/*--><![CDATA[/*><!--*/
+/*******************************************************************************
+ * @author: Hsiaw-yih
+ * @version: 1.0
+ * Licence: CC
+ * About:
+ *  Hsiaw-yih wrote this file for KDr2.
+ *
+ ******************************************************************************/
+body {
+    background: #fff;
+    color: #333;
+    font: 14px/1.7 sans-serif;
+    margin: 5% 15% 8%;
+    min-width: 600px;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    /*color: #ea8400;*/
+    padding: 1em 0 15px;
+    text-align: left;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+h2 {
+    font-size: 2em;
+    padding: 1em 0 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+h3 {
+    font-size: 1.5em;
+    padding: 0.5em 0 10px;
+    border-bottom: 1px solid #eee;
+}
+h1, h2, h3 {
+    line-height: 1.4;
+}
+
+h2 span, h3 span, h4 span {
+    color: #ccc;
+    font-weight: normal;
+}
+
+.todo, .deadline {
+    color: red;
+}
+.todo, .done,
+.tag span {
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: normal;
+}
+.todo {
+    background-color: #e14344;
+}
+.done {
+    background-color: #009d6f;
+}
+h3 .todo, h3 .done {
+    font-size: 0.75em;
+}
+
+.tag {
+    float: right;
+}
+.tag span {
+    background-color: #ccc;
+    color: #000;
+    margin-left: 0.3em;
+}
+
+.timestamp {
+    padding-left: 2px;
+    padding-right: 2px;
+    color: black;
+    background-color: #ccc;
+    border: solid 1px #aaa;
+}
+
+.content {
+    background-color: #fff;
+}
+
+h1.title {
+    text-align: left;
+}
+
+.target {
+    background-color: lavender;
+}
+
+.menu {
+    color: #666;
+}
+
+.menu a:link {
+    color: #888;
+}
+.menu a:active {
+    color: #888;
+}
+.menu a:visited {
+    color: #888;
+}
+
+a:link, a:visited {
+    color: #4e93d6;
+}
+a:active {
+    color: #4e93d6;
+}
+
+img { align: center; }
+
+pre {
+    background-color: #333;
+    border: #ddd solid 2px;
+    color: #fff;
+    font: 14px/1.5 monospace;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+th {
+	vertical-align: top;
+	border: 1px solid #e2e2e2;
+}
+
+td {
+	vertical-align: top;
+	border: 1px solid #e2e2e2;
+}
+
+#org-div-home-and-up {
+    float: right;
+}
+
+#postamble {
+	font-size: 12px;
+	color: #666;
+	text-align: right;
+	border-top: #ccc solid 1px;
+	margin-top: 2em;
+	padding-top: 1em;
+}
+#postamble p {
+	margin: 0 1em;
+}
+
+#table-of-contents {
+    font-size: 9pt;
+    position: fixed;
+    right: 0em;
+    top: 0em;
+    background: white;
+    border: #ccc solid;
+    border-width: 0 0 1px 1px;
+    /* ensure doesn't flow off the screen when expanded */
+    max-height: 80%;
+    overflow: auto;
+    z-index: 200;
+}
+
+#table-of-contents h2 {
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 0.05em 0.5em 0.5em;
+    border-bottom: none;
+}
+
+#table-of-contents ul {
+    margin-left: 14pt;
+    margin-bottom: 10pt;
+    padding: 0
+}
+
+#table-of-contents li {
+    padding: 0;
+    margin: 1px;
+    list-style: none;
+}
+
+#table-of-contents ul>:first-child {
+    color: blue;
+}
+
+#table-of-contents #text-table-of-contents {
+    display: none;
+    text-align: left;
+}
+
+#table-of-contents:hover #text-table-of-contents {
+    display: block;
+    padding: 0.5em;
+    margin-top: -1.5em;
+}
+
+code {
+    display: inline-block;
+    background-color: #cce;
+    padding: 1px 5px;
+    border-radius: 3px;
+    line-height: normal;
+}
+
+.footdef sup {
+    vertical-align: baseline;
+    font-size: inherit;
+}
+
+.footpara {
+    margin: 7px;
+    display: inline;
+}
+/*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">task</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. TODO'S</a>
+<ul>
+<li><a href="#sec-1-1">1.1. Learn to use org-mode</a></li>
+<li><a href="#sec-1-2">1.2. <span class="done DONE">DONE</span> : python decorators </a></li>
+<li><a href="#sec-1-3">1.3. <span class="todo TODO">TODO</span> why mssql<sub>query</sub> query multi sql at an time, but mysql<sub>query</sub> can't</a></li>
+<li><a href="#sec-1-4">1.4. <span class="done DONE">DONE</span> 三、职工管理系统</a></li>
+<li><a href="#sec-1-5">1.5. <span class="todo TODO">TODO</span> nnn</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Notes</a>
+<ul>
+<li><a href="#sec-2-1">2.1. ridis opration:&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></a></li>
+<li><a href="#sec-2-2">2.2. Save emacs session:</a></li>
+<li><a href="#sec-2-3">2.3. Mysql : use FIELD function to sort record</a></li>
+<li><a href="#sec-2-4">2.4. update product cache:</a></li>
+<li><a href="#sec-2-5">2.5. Communicate with redis server use nc</a></li>
+<li><a href="#sec-2-6">2.6. Composer Learning</a>
+<ul>
+<li><a href="#sec-2-6-1">2.6.1. Reference:</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-7">2.7. Macports</a></li>
+<li><a href="#sec-2-8">2.8. install-php-mcrypt-on-centos6</a>
+<ul>
+<li><a href="#sec-2-8-1">2.8.1. i386</a></li>
+<li><a href="#sec-2-8-2">2.8.2. x86<sub>64</sub></a></li>
+<li><a href="#sec-2-8-3">2.8.3. yum install php-mcrypt</a></li>
+<li><a href="#sec-2-8-4">2.8.4. restart apache</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-9">2.9. regex :</a></li>
+<li><a href="#sec-2-10">2.10. start httpd error:</a></li>
+<li><a href="#sec-2-11">2.11. Python learning:</a></li>
+<li><a href="#sec-2-12">2.12. Ubuntu add user:</a>
+<ul>
+<li><a href="#sec-2-12-1">2.12.1. `useradd -m username`</a></li>
+<li><a href="#sec-2-12-2">2.12.2. `echo 'username ALL=(ALL) NOPASSWD:ALL' &gt;&gt; /etc/sudoers`</a></li>
+<li><a href="#sec-2-12-3">2.12.3. cd into user's home directory &amp; create authorized<sub>keys</sub> file under .ssh</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-13">2.13. Ubuntu update package</a>
+<ul>
+<li><a href="#sec-2-13-1">2.13.1. apt-get update -y</a></li>
+<li><a href="#sec-2-13-2">2.13.2. apt-get upgrade -y</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-14">2.14. Js closure</a>
+<ul>
+<li><a href="#sec-2-14-1">2.14.1. use closure to show and hide element</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-15">2.15. jquery array diff</a></li>
+<li><a href="#sec-2-16">2.16. edx platform:</a></li>
+<li><a href="#sec-2-17">2.17. Emacs operate, create directory</a></li>
+<li><a href="#sec-2-18">2.18. how to write an gitingore file</a></li>
+<li><a href="#sec-2-19">2.19. run php under Fast-cgi and nginx(ubuntu)</a></li>
+<li><a href="#sec-2-20">2.20. linux `source` command</a></li>
+<li><a href="#sec-2-21">2.21. linux `which` command</a></li>
+<li><a href="#sec-2-22">2.22. linix `traceroute` command</a></li>
+<li><a href="#sec-2-23">2.23. set socket proxy:</a></li>
+<li><a href="#sec-2-24">2.24. install emasc24.4</a></li>
+<li><a href="#sec-2-25">2.25. install ack</a></li>
+<li><a href="#sec-2-26">2.26. emacs opt:</a></li>
+<li><a href="#sec-2-27">2.27. emacs opt:</a></li>
+<li><a href="#sec-2-28">2.28. how to use tmux:</a></li>
+<li><a href="#sec-2-29">2.29. how-to-convert-an-entire-mysql-database-characterset-and-collation-to-utf-8</a></li>
+<li><a href="#sec-2-30">2.30. how to delete an course from edx:</a></li>
+<li><a href="#sec-2-31">2.31. php extension developer</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> TODO'S</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Learn to use org-mode</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> <span class="done DONE">DONE</span> : python decorators <a href="http://personalpages.tds.net/~kent37/kk/00001.html">http://personalpages.tds.net/~kent37/kk/00001.html</a></h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> <span class="todo TODO">TODO</span> why mssql<sub>query</sub> query multi sql at an time, but mysql<sub>query</sub> can't</h3>
+</div>
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> <span class="done DONE">DONE</span> 三、职工管理系统</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+1、问题描述  对单位的职工进行管理，包括插入、删除、查找、排序等功能。 
+2、要求  职工对象包括编号，姓名（字符串）、性别（字符）、出生年月（数字）、工作年月（数字）、学历（字符串）、职务（字符串）、住址（字符串）、电话（字符串）等信息。（1）新增一名职工：将新增职工对放入数据库中。（2）删除一名职工：从数据库中删除一名职工对象。（3）查询：从职工管理文件中查询符合某些条件的职工。（4）修改：检索某个职工对象，对其某些属性进行修改。（5）排序：按某种需要对数据库中职工进行排序。
+ 3、实现功能（1）由键盘输入职工对象，以文件方式保存。程序执行时先将文件读入内存。  （2）对职工对象中的“姓名”按字典顺序进行排序。  （3）对排序后的职工对象进行增、删、查询、修改、排序等操作。
+</p>
+
+<p>
+<a href="file:///home/yixin/project/notes/programing/c/mysql_c_api_programming/version.c"><a href="file:///home/yixin/project/notes/programing/c/mysql_c_api_programming/version.c">file:///home/yixin/project/notes/programing/c/mysql_c_api_programming/version.c</a> *create<sub>query</sub> = "CREATE DATABASE test";</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> <span class="todo TODO">TODO</span> nnn</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+<a href="file:///home/yixin/project/mine/org/task.html">三、职工管理系统</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Notes</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> ridis opration:&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ATTACH">ATTACH</span></span></h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+0:00:00    :PROPERTIES:
+</p>
+<p>
+:Attachments: index.html
+</p>
+<p>
+:ID:       98392082-ef62-4374-b6a0-340d2cbcd9a3
+</p>
+<p>
+:END:
+zrange featured<sub>products</sub>?ascby[score] 0 -1 withscores
+zgetall store<sub>1422</sub>.product?id=133
+<a href="file:///home/yixin/project/pincommerce/quickstart/application/models/FeaturedProductsMapper.php"><a href="file:///home/yixin/project/pincommerce/quickstart/application/models/FeaturedProductsMapper.php">file:///home/yixin/project/pincommerce/quickstart/application/models/FeaturedProductsMapper.php</a>(CacheKey::q('featured<sub>products'</sub>)-&gt;asc('score'), array($key));</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Save emacs session:</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Save: 
+Command + s save session to default dir
+M + x desktop-save can change dir
+Open:
+M + x desktop-cd use the default dir to load session
+M + x desktop-change-dir change the session dir
+<a href="file:///home/yixin/project/pincommerce/quickstart/application/models/ProductsMapper.php"><a href="file:///home/yixin/project/pincommerce/quickstart/application/models/ProductsMapper.php">file:///home/yixin/project/pincommerce/quickstart/application/models/ProductsMapper.php</a> ($convert<sub>picture</sub><sub>array</sub> as $pic) {</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Mysql : use FIELD function to sort record</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+select * from converted<sub>pictures</sub> where picture<sub>id</sub> in (32,39,31)
+order by FIELD (picture<sub>id</sub>, 32,39,31) \G;
+referance: <a href="http://stackoverflow.com/questions/1332434/mysql-order-by-in">http://stackoverflow.com/questions/1332434/mysql-order-by-in</a>
+<a href="file:///home/yixin/project/pincommerce/quickstart/application/models/DAL.php">file:///home/yixin/project/pincommerce/quickstart/application/models/DAL.php</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> update product cache:</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+** update
+del kv, dont touch kList
+** delete product
+del kv and Klist
+** delete pictures or tags
+del kv, dont touch kList
+</p>
+
+<ul class="org-ul">
+<li>merchant product page
+</li>
+</ul>
+<p>
+delete product: api/delete-product &#x2014;  delete kList, kv
+delete picture api/deleteproductpicture &#x2014; delete kv
+delete tag api/deleteproductcategory &#x2014; delete kv 
+</p>
+
+<p>
+update product field: api/createproducts &#x2014; this call saveObject
+create tag api/createproducts
+upload pictures api/createproducts
+picture ordering api/createproducts
+</p>
+
+<p>
+<b><b>*</b></b> sample code
+$store<sub>dbobj</sub> = $this-&gt;store<sub>dbobj</sub>;        
+$product<sub>id</sub> = $<sub>REQUEST['product</sub><sub>id']</sub>;
+$dbname = $store<sub>dbobj</sub>-&gt;getDBName();
+$ck = CacheKey::q($dbname.'.products')-&gt;<sub>and</sub>('status=active');
+$key = $dbname.".product?id=".$product<sub>id</sub>;
+</p>
+
+<p>
+DAL::deleteFromList($ck, array($key));
+DAL::delete(CacheKey::q($key));
+</p>
+
+<ul class="org-ul">
+<li>after checkout 
+del kv, if quantity = 0, del kList
+</li>
+</ul>
+
+<p>
+<a href="file:///home/yixin/project/pincommerce/quickstart/application/services/StoreService.php"><a href="file:///home/yixin/project/pincommerce/quickstart/application/services/StoreService.php">file:///home/yixin/project/pincommerce/quickstart/application/services/StoreService.php</a>' =&gt; array('id' =&gt; 0, 'status' =&gt; 0, 'name' =&gt; '', 'shipping<sub>destinations'</sub> =&gt; array()),</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> Communicate with redis server use nc</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+(echo -en "SET name 'wyx'\r\n") | nc localhost 6379
+<a href="file:///home/yixin/project/php-redis/Redis.php"><a href="file:///home/yixin/project/php-redis/Redis.php">file:///home/yixin/project/php-redis/Redis.php</a> function cmdResponse() {</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-6" class="outline-3">
+<h3 id="sec-2-6"><span class="section-number-3">2.6</span> Composer Learning</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+install: 
+$ curl -sS <a href="https://getcomposer.org/installer">https://getcomposer.org/installer</a> | php
+$ mv composer.phar /usr/local/bin/composer
+usage:
+$ composer 
+</p>
+</div>
+<div id="outline-container-sec-2-6-1" class="outline-4">
+<h4 id="sec-2-6-1"><span class="section-number-4">2.6.1</span> Reference:</h4>
+<div class="outline-text-4" id="text-2-6-1">
+<p>
+<a href="http://getcomposer.org/doc/00-intro.md">http://getcomposer.org/doc/00-intro.md</a>
+<a href="https://packagist.org/">https://packagist.org/</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-7" class="outline-3">
+<h3 id="sec-2-7"><span class="section-number-3">2.7</span> Macports</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+port install &amp; search package-name 
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-8" class="outline-3">
+<h3 id="sec-2-8"><span class="section-number-3">2.8</span> install-php-mcrypt-on-centos6</h3>
+<div class="outline-text-3" id="text-2-8">
+</div><div id="outline-container-sec-2-8-1" class="outline-4">
+<h4 id="sec-2-8-1"><span class="section-number-4">2.8.1</span> i386</h4>
+<div class="outline-text-4" id="text-2-8-1">
+<p>
+rpm -Uvh
+<a href="http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm">http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-8-2" class="outline-4">
+<h4 id="sec-2-8-2"><span class="section-number-4">2.8.2</span> x86<sub>64</sub></h4>
+<div class="outline-text-4" id="text-2-8-2">
+<p>
+rpm -Uvh
+<a href="http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm">http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-8-3" class="outline-4">
+<h4 id="sec-2-8-3"><span class="section-number-4">2.8.3</span> yum install php-mcrypt</h4>
+</div>
+<div id="outline-container-sec-2-8-4" class="outline-4">
+<h4 id="sec-2-8-4"><span class="section-number-4">2.8.4</span> restart apache</h4>
+</div>
+</div>
+<div id="outline-container-sec-2-9" class="outline-3">
+<h3 id="sec-2-9"><span class="section-number-3">2.9</span> regex :</h3>
+<div class="outline-text-3" id="text-2-9">
+<p>
+<a href="http://zh.wikipedia.org/wiki/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F">http://zh.wikipedia.org/wiki/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-10" class="outline-3">
+<h3 id="sec-2-10"><span class="section-number-3">2.10</span> start httpd error:</h3>
+<div class="outline-text-3" id="text-2-10">
+<p>
+netstat -lnp | grep 80 
+kill -9 1685
+[[<a href="file:///home/yixin/project/pincommerce/quickstart/application/utils/utils.php">file:///home/yixin/project/pincommerce/quickstart/application/utils/utils.php</a>($dom-&gt;query('meta%5Bproperty%3D"pinterestapp:category"%5D')%20as%20$category<sub>elem</sub>)%20{][<a href="file:///home/yixin/project/pincommerce/quickstart/application/utils/utils.php">file:///home/yixin/project/pincommerce/quickstart/application/utils/utils.php</a> foreach($dom-&gt;query('meta[property="pinterestapp:category"]') as $category<sub>elem</sub>) {]]
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-11" class="outline-3">
+<h3 id="sec-2-11"><span class="section-number-3">2.11</span> Python learning:</h3>
+<div class="outline-text-3" id="text-2-11">
+<p>
+how to debug web.py
+useage of <span class="underline"><span class="underline">init</span></span>.py under each folder
+<a href="file:///home/yixin/vagrant/local_01/web.py/controllers/index.py"><a href="file:///home/yixin/vagrant/local_01/web.py/controllers/index.py">file:///home/yixin/vagrant/local_01/web.py/controllers/index.py</a> web</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-12" class="outline-3">
+<h3 id="sec-2-12"><span class="section-number-3">2.12</span> Ubuntu add user:</h3>
+<div class="outline-text-3" id="text-2-12">
+</div><div id="outline-container-sec-2-12-1" class="outline-4">
+<h4 id="sec-2-12-1"><span class="section-number-4">2.12.1</span> `useradd -m username`</h4>
+</div>
+<div id="outline-container-sec-2-12-2" class="outline-4">
+<h4 id="sec-2-12-2"><span class="section-number-4">2.12.2</span> `echo 'username ALL=(ALL) NOPASSWD:ALL' &gt;&gt; /etc/sudoers`</h4>
+</div>
+<div id="outline-container-sec-2-12-3" class="outline-4">
+<h4 id="sec-2-12-3"><span class="section-number-4">2.12.3</span> cd into user's home directory &amp; create authorized<sub>keys</sub> file under .ssh</h4>
+</div>
+</div>
+<div id="outline-container-sec-2-13" class="outline-3">
+<h3 id="sec-2-13"><span class="section-number-3">2.13</span> Ubuntu update package</h3>
+<div class="outline-text-3" id="text-2-13">
+</div><div id="outline-container-sec-2-13-1" class="outline-4">
+<h4 id="sec-2-13-1"><span class="section-number-4">2.13.1</span> apt-get update -y</h4>
+</div>
+<div id="outline-container-sec-2-13-2" class="outline-4">
+<h4 id="sec-2-13-2"><span class="section-number-4">2.13.2</span> apt-get upgrade -y</h4>
+</div>
+</div>
+<div id="outline-container-sec-2-14" class="outline-3">
+<h3 id="sec-2-14"><span class="section-number-3">2.14</span> Js closure</h3>
+<div class="outline-text-3" id="text-2-14">
+<div class="org-src-container">
+
+<pre class="src src-js"><span style="color: #ffff00;">function</span> <span style="color: #0000ff; font-weight: bold;">add</span>() {
+    <span style="color: #ffff00;">var</span> <span style="color: #ffff00;">n</span> = 0;
+
+    <span style="color: #ffff00;">return</span> <span style="color: #ffff00;">function</span>(){
+       console.log(n++);    
+    };
+}
+<span style="color: #ffff00;">var</span> <span style="color: #ffff00;">a</span> = add();
+a(); --&gt; output 0
+a(); --&gt; output 1
+</pre>
+</div>
+</div>
+<div id="outline-container-sec-2-14-1" class="outline-4">
+<h4 id="sec-2-14-1"><span class="section-number-4">2.14.1</span> use closure to show and hide element</h4>
+<div class="outline-text-4" id="text-2-14-1">
+<p>
+```
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+function show(){
+    var n = 0; 
+    var elem = $('.show'); 
+</p>
+
+<p>
+    var length = elem.length;
+    return function() {
+        if(n <code>=</code> length) n = 0;
+        elem.hide()
+        $(elem[n++]).show();
+        console.log(n, length, elem[n]);
+    }
+}
+</p>
+
+<p>
+var s = show();
+setInterval(s, 1000);
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="show"&gt;111111&lt;/div&gt;
+&lt;div class="show"&gt;222222&lt;/div&gt;
+&lt;div class="show"&gt;333333&lt;/div&gt;
+&lt;div class="show"&gt;444444&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+```
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-15" class="outline-3">
+<h3 id="sec-2-15"><span class="section-number-3">2.15</span> jquery array diff</h3>
+<div class="outline-text-3" id="text-2-15">
+<div class="org-src-container">
+
+<pre class="src src-js"><span style="color: #ffff00;">var</span> <span style="color: #ffff00;">old_array</span> = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+<span style="color: #ffff00;">var</span> <span style="color: #ffff00;">new_array</span> = [1, 2, 3, 4, 5, 6];
+
+<span style="color: #ffff00;">var</span> <span style="color: #ffff00;">diff</span> = $(old_array).not(new_array).get();
+
+diff
+[7 ,8, 9]
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-16" class="outline-3">
+<h3 id="sec-2-16"><span class="section-number-3">2.16</span> edx platform:</h3>
+<div class="outline-text-3" id="text-2-16">
+<p>
+lms: port 80
+studio: port 18010
+</p>
+
+<p>
+learning and debug:
+/courses/edX/Open<sub>DemoX</sub>/edx<sub>demo</sub><sub>course</sub>/courseware
+=&gt; port to
+/edx/app/edxapp/edx-platform/lms/djangoapps/courseware/views.py
+index
+</p>
+
+<p>
+root: /edx/app/edxapp
+</p>
+
+<p>
+nginx<sub>conf</sub>: /etc/nginx/nginx<sub>conf</sub>
+</p>
+
+<p>
+access<sub>log</sub> /edx/var/log/nginx/access.log p<sub>combined</sub>;
+error<sub>log</sub> /edx/var/log/nginx/error.log;
+include /edx/app/nginx/sites-enabled/*;
+include /edx/app/nginx/conf.d/*.conf;
+</p>
+
+<ol class="org-ol">
+<li>source /edx/app/edxapp/venvs/edxapp/bin/activate
+</li>
+<li>restart lms &amp; work :
+```
+sudo /edx/bin/supervisorctl -c /edx/etc/supervisord.conf restart edxapp:
+sudo /edx/bin/supervisorctl -c /edx/etc/supervisord.conf restart edxapp<sub>worker</sub>:
+````
+</li>
+<li>supervisord (a process manager for python) 
+locate: /edx/app/supervisor/supervisord.conf
+www-data  1278  0.1  0.0  60492 13996 ?        Ss   Mar20  11:48 
+/edx/app/supervisor/venvs/supervisor/bin/python /edx/app/supervisor/venvs/supervisor/bin/supervisord &#x2013;nodaemon &#x2013;configuration /edx/app/supervisor/supervisord.conf
+</li>
+<li>package locate:
+/edx/app/edxapp/venvs/edxapp/lib/python2.7/site-packages
+</li>
+<li>pip install path.py
+</li>
+</ol>
+
+<p>
+Dev-server setup:
+`./manage.py cms runserver 0.0.0.0:10000`
+`./manage.py lms runserver 0.0.0.0:10080`
+</p>
+
+<p>
+<b>*</b> EDX bug fix :
+</p>
+<ol class="org-ol">
+<li>sync db error: django.db.utils.DatabaseError: (1170, "BLOB/TEXT column 'claimed<sub>id'</sub> used in key specification without a key length")
+</li>
+</ol>
+
+<p>
+We had to modify the file 
+</p>
+
+<p>
+./.virtualenvs/edx-platform/lib/python2.7/site-packages/django<sub>openid</sub><sub>auth</sub>/models.py
+</p>
+
+<p>
+The class (table) entry is : 
+</p>
+
+<p>
+class UserOpenID(models.Model):
+user = models.ForeignKey(User)
+claimed<sub>id</sub> = models.TextField(max<sub>length</sub>=2047, unique=True)
+display<sub>id</sub> = models.TextField(max<sub>length</sub>=2047)
+</p>
+
+<p>
+We had to remove unique=True and then it worked!
+</p>
+
+<ol class="org-ol">
+<li>set mysql charset to use utf-8
+</li>
+<li>change domains in both cms and lms cofig file(TODO)
+domain: course.hbut.edu.cn
+</li>
+<li>重置邮件   
+</li>
+
+<li>logo path at home page: /edx/var/edxapp/staticfiles/images/header-logo.png
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-sec-2-17" class="outline-3">
+<h3 id="sec-2-17"><span class="section-number-3">2.17</span> Emacs operate, create directory</h3>
+<div class="outline-text-3" id="text-2-17">
+<p>
+C-x d Then +
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-18" class="outline-3">
+<h3 id="sec-2-18"><span class="section-number-3">2.18</span> how to write an gitingore file</h3>
+</div>
+<div id="outline-container-sec-2-19" class="outline-3">
+<h3 id="sec-2-19"><span class="section-number-3">2.19</span> run php under Fast-cgi and nginx(ubuntu)</h3>
+<div class="outline-text-3" id="text-2-19">
+<p>
+reference: <a href="http://wiki.ubuntu.org.cn/Nginx#.E9.85.8D.E7.BD.AE_nginx_uwsgi_django">http://wiki.ubuntu.org.cn/Nginx#.E9.85.8D.E7.BD.AE_nginx_uwsgi_django</a>
+</p>
+<ol class="org-ol">
+<li>安装nginx
+```
+sudo apt-get install nginx
+```
+Ubuntu安装之后的文件结构大致为：
+
+<p>
+所有的配置文件都在/etc/nginx下，并且每个虚拟主机已经安排在了/etc/nginx/sites-available下程序文件在/usr/sbin/nginx
+日志放在了/var/log/nginx中并已经在/etc/init.d/下创建了启动脚本nginx
+默认的虚拟主机的目录设置在了/var/www/nginx-default
+</p>
+</li>
+<li>启动nginx
+service nginx start
+</li>
+<li>安装Php和mysql
+```
+apt-get install php5-cli php5-cgi mysql-server php5-mysql
+```
+</li>
+<li>安装FastCgi
+```
+sudo apt-get install spawn-fcgi
+```
+/usr/bin/spawn-fcgi这个文件来管理 FastCgi
+</li>
+<li>配置 nginx
+<ul class="org-ul">
+<li>修改nginx的配置文件：/etc/nginx/sites-available/default 修改主机名：
+```
+server<sub>name</sub> localhost;
+```
+</li>
+<li>修改index的一行修改为：
+```
+index index.php index.html index.htm;
+```
+</li>
+<li>去掉下面部分的注释用于支持 php 脚本：
+ ```
+ location ~ \.php$ {
+     include /etc/nginx/fastcgi<sub>params</sub>; #需放在第一行，否则会出错
+     fastcgi<sub>pass</sub> 127.0.0.1:9000;
+     fastcgi<sub>index</sub> index.php;
+     fastcgi<sub>param</sub> SCRIPT<sub>FILENAME</sub> /var/www/nginx-default$fastcgi<sub>script</sub><sub>name</sub>;
+ }
+```
+</li>
+</ul>
+</li>
+<li>重新启动nginx:
+```
+service nginx restart
+```
+</li>
+<li>启动fastcgi php:
+```
+spawn-fcgi -a 127.0.0.1 -p 9000 -C 10 -u www-data -f /usr/bin/php-cgi
+```
+为了让php-cgi开机自启动： Ubuntu开机之后会执行/etc/rc.local文件中的脚本 所以我们可以直接在/etc/rc.local中添加启动脚本。 
+spawn-fcgi -a 127.0.0.1 -p 9000 -C 10 -u www-data -f /usr/bin/php-cgi 添加到语句：exit 0 前面才行
+</li>
+<li>创建、测试phpinfo：
+sudo echo "&lt;?php phpinfo(); ?&gt;" &gt; /var/www/nginx-default/index.php
+</li>
+</ol>
+
+<p>
+Fast-cgi 操作：关闭php-cgi
+    ```
+    sudo killall -HUP php-cgi
+    ```
+    重启php-cgi
+    ```
+    spawn-fcgi -a 127.0.0.1 -p 9000 -C 10 -u www-data -f /usr/bin/php-cgi
+    ```
+</p>
+
+<p>
+Happy Hacking!
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-20" class="outline-3">
+<h3 id="sec-2-20"><span class="section-number-3">2.20</span> linux `source` command</h3>
+<div class="outline-text-3" id="text-2-20">
+<p>
+在当前shell环境中加载文件，是得不需要重启
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-21" class="outline-3">
+<h3 id="sec-2-21"><span class="section-number-3">2.21</span> linux `which` command</h3>
+<div class="outline-text-3" id="text-2-21">
+<p>
+which - shows the full path of (shell) commands.  
+useage:
+```
+yixin@c3po:~$ which ruby
+/usr/bin/ruby
+</p>
+
+<p>
+yixin@c3po:~$ ls -l /usr/bin/ruby
+lrwxrwxrwx 1 root root 22 Mar 30 10:07 /usr/bin/ruby -&gt; /etc/alternatives/ruby
+</p>
+
+<p>
+yixin@c3po:~$ ls -l /etc/alternatives/ruby
+lrwxrwxrwx 1 root root 16 Mar 30 12:36 /etc/alternatives/ruby -&gt; /usr/bin/ruby1.8
+</p>
+
+<p>
+yixin@c3po:~$ dpkg -S /usr/bin/ruby1.8 # 
+ruby1.8: /usr/bin/ruby1.8
+</p>
+
+<p>
+yixin@c3po:~$  sudo apt-get remove ruby1.8
+```
+</p>
+
+<p>
+Notice:
+`alternatives` - choice witch version of package to use
+`dpkg` - package manager for Debian (short for debian package)      
+    -S|&#x2013;search &lt;pattern&gt; &#x2026;        Find package(s) owning
+file(s).
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-22" class="outline-3">
+<h3 id="sec-2-22"><span class="section-number-3">2.22</span> linix `traceroute` command</h3>
+<div class="outline-text-3" id="text-2-22">
+<p>
+traceroute baidu.com
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-23" class="outline-3">
+<h3 id="sec-2-23"><span class="section-number-3">2.23</span> set socket proxy:</h3>
+<div class="outline-text-3" id="text-2-23">
+<p>
+ssh wyixin@shop-dev05.cloudapp.net -D 10086
+export all<sub>proxy</sub>=socks5://127.0.0.1:10086
+unset all<sub>proxy</sub> # this is used to unsert proxy
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-24" class="outline-3">
+<h3 id="sec-2-24"><span class="section-number-3">2.24</span> install emasc24.4</h3>
+<div class="outline-text-3" id="text-2-24">
+<ol class="org-ol">
+<li>remove emacs first if already exist
+```
+yixin@r2d2:~$ which emacs
+/usr/bin/emacs
+yixin@r2d2:~$ ls -l /usr/bin/emacs
+lrwxrwxrwx 1 root root 23 Mar 19 10:31 /usr/bin/emacs -&gt; /etc/alternatives/emacs
+yixin@r2d2:~$ ls -l /etc/alternatives/emacs
+lrwxrwxrwx 1 root root 18 Mar 19 10:31 /etc/alternatives/emacs -&gt; /usr/bin/emacs23-x
+yixin@r2d2:~$ dpkg -S /usr/bin/emacs23-x
+emacs23: /usr/bin/emacs23-x
+yixin@r2d2:~$ sudo apt-get purge emacs23
+```
+</li>
+<li>install:
+```
+$ sudo apt-get install python-software-properties
+$ sudo apt-add-repository ppa:cassou/emacs
+$ sudo apt-get update
+and then
+$ sudo apt-get install emacs24
+```
+</li>
+<li>reference:
+<a href="http://wikemacs.org/index.php/Installing_Emacs_on_GNU/Linux#Emacs_24_2">http://wikemacs.org/index.php/Installing_Emacs_on_GNU/Linux#Emacs_24_2</a>
+<a href="http://ubuntuhandbook.org/index.php/2013/09/install-upgrade-to-emacs-24-3-in-ubuntu-13-04-12-10-12-04/">http://ubuntuhandbook.org/index.php/2013/09/install-upgrade-to-emacs-24-3-in-ubuntu-13-04-12-10-12-04/</a>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-sec-2-25" class="outline-3">
+<h3 id="sec-2-25"><span class="section-number-3">2.25</span> install ack</h3>
+<div class="outline-text-3" id="text-2-25">
+<p>
+sudo apt-get install ack-grep
+sudo dpkg-divert &#x2013;local &#x2013;divert /usr/bin/ack &#x2013;rename &#x2013;add   /usr/bin/ack-grep
+reference:
+<a href="http://beyondgrep.com/install/">http://beyondgrep.com/install/</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-26" class="outline-3">
+<h3 id="sec-2-26"><span class="section-number-3">2.26</span> emacs opt:</h3>
+<div class="outline-text-3" id="text-2-26">
+<p>
+C-h m to get help page
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-27" class="outline-3">
+<h3 id="sec-2-27"><span class="section-number-3">2.27</span> emacs opt:</h3>
+<div class="outline-text-3" id="text-2-27">
+<p>
+C-c v get function list 
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-28" class="outline-3">
+<h3 id="sec-2-28"><span class="section-number-3">2.28</span> how to use tmux:</h3>
+<div class="outline-text-3" id="text-2-28">
+<p>
+<b>*</b> sessions
+</p>
+<ol class="org-ol">
+<li>start an new session with name
+tmux new -s &lt;session-name&gt;
+</li>
+<li>kill an session 
+tmux kill-session -t &lt;session-name&gt;
+</li>
+<li>attach an exists session
+tmux attach -t &lt;session-name&gt;
+</li>
+<li>switch between sessions
+tmux switch -t &lt;session-name&gt;
+</li>
+<li>list sessions
+tmux list-sessions
+</li>
+</ol>
+<p>
+<b>*</b> windows
+</p>
+<ol class="org-ol">
+<li>C-b c (Create now window)
+</li>
+<li>C-b n (Go to next window)
+</li>
+<li>C-b p (Previously window)
+</li>
+<li>C-b w (List windows to be choose)
+</li>
+</ol>
+<p>
+<b>*</b> panes
+</p>
+<ol class="org-ol">
+<li>C-b % (Split the window vertically)
+</li>
+<li>C-b " (Split window horizontally)
+</li>
+<li>C-b x (Close this pane)
+</li>
+<li>C-b o (Goto next pane)
+</li>
+<li>C-b ; (Back to previously pane)
+</li>
+</ol>
+<p>
+Referrence:
+<a href="http://blog.jeswang.org/blog/2013/06/24/tmux-kuai-su-jiao-cheng/">http://blog.jeswang.org/blog/2013/06/24/tmux-kuai-su-jiao-cheng/</a>
+<a href="http://code.tutsplus.com/tutorials/intro-to-tmux--net-33889">http://code.tutsplus.com/tutorials/intro-to-tmux--net-33889</a>
+<a href="https://gist.github.com/henrik/1967800">https://gist.github.com/henrik/1967800</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-29" class="outline-3">
+<h3 id="sec-2-29"><span class="section-number-3">2.29</span> how-to-convert-an-entire-mysql-database-characterset-and-collation-to-utf-8</h3>
+<div class="outline-text-3" id="text-2-29">
+<p>
+set db.init use utf-8 first
+<a href="http://airbladesoftware.com/notes/fixing-mysql-illegal-mix-of-collations/">http://airbladesoftware.com/notes/fixing-mysql-illegal-mix-of-collations/</a>
+</p>
+
+<p>
+```
+DB="dbname"
+(
+echo 'ALTER DATABASE `'"$DB"'` CHARACTER SET utf8 COLLATE utf8<sub>general</sub><sub>ci</sub>;'
+mysql "$DB" -e "SHOW TABLES" &#x2013;batch &#x2013;skip-column-names \
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">xargs -I{} echo 'ALTER TABLE `'{}'` CONVERT TO CHARACTER SET utf8 COLLATE utf8<sub>general</sub><sub>ci</sub>;'</td>
+</tr>
+</tbody>
+</table>
+<p>
+) || mysql "$DB" 
+```
+<a href="http://stackoverflow.com/questions/6115612/how-to-convert-an-entire-mysql-database-characterset-and-collation-to-utf-8">http://stackoverflow.com/questions/6115612/how-to-convert-an-entire-mysql-database-characterset-and-collation-to-utf-8</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-30" class="outline-3">
+<h3 id="sec-2-30"><span class="section-number-3">2.30</span> how to delete an course from edx:</h3>
+<div class="outline-text-3" id="text-2-30">
+<p>
+cd /edx/app/edxapp/edx-platform
+sudo -u www-data /edx/app/edxapp/venvs/edxapp/bin/python ./manage.py cms &#x2013;settings aws delete<sub>course</sub> edX/Open<sub>DemoX</sub>/edx<sub>demo</sub><sub>course</sub>  commit
+sudo /edx/bin/supervisorctl -c /edx/etc/supervisord.conf restart edxapp:
+referance:
+<a href="http://www.edustack.org/?page_id=8">http://www.edustack.org/?page_id=8</a>
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2-31" class="outline-3">
+<h3 id="sec-2-31"><span class="section-number-3">2.31</span> php extension developer</h3>
+<div class="outline-text-3" id="text-2-31">
+<ol class="org-ol">
+<li>required dependencie:
+</li>
+</ol>
+<p>
+git, php5-dev and make
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: yixin</p>
+<p class="date">Created: 2014-07-04 Fri 02:44</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.4.50.1 (<a href="http://orgmode.org">Org</a> mode 8.2.6)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
